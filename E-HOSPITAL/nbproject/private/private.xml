@@ -2,6 +2,16 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/CONTROL/Registrasi_Control.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/MODEL/Pasien_Model.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/MODEL/Staf_Model.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/CONTROL/Login_Control.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/Database/KoneksiDatabaseUser.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/MODEL/User_Model.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/VIEW/MenuUtama_GUI.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/VIEW/Register_GUI.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/VIEW/Login_GUI.java</file>
+        </group>
     </open-files>
 </project-private>
