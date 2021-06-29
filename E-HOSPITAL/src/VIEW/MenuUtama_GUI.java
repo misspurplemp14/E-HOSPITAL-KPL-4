@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package VIEW;
-
-import static VIEW.PesanDokter_GUI.pesanDokter;
 import javax.swing.JOptionPane;
 
 /**
@@ -70,19 +68,9 @@ public class MenuUtama_GUI extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(138, 184, 252));
         jButton3.setText("Riwayat Pesan Dokter");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
 
         jButton1.setBackground(new java.awt.Color(153, 204, 255));
         jButton1.setText("Pesan Dokter");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         jPanel2.setBackground(new java.awt.Color(138, 184, 252));
 
@@ -174,20 +162,6 @@ public class MenuUtama_GUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        JadwalDokter_GUI j = new JadwalDokter_GUI(); //buat form baru
-        j.show();
-        dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        PesanDokter_GUI psn = new PesanDokter_GUI(); //buat form baru
-        psn.show();
-        dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
