@@ -2,6 +2,7 @@ package CONTROL;
 
 import Database.KoneksiDatabaseUser;
 import MODEL.User_Model;
+import VIEW.Login_GUI;
 import VIEW.Register_GUI;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,11 +25,16 @@ public class Registrasi_Control {
         }else if(regis.getNamaTxtField().isEmpty()|| regis.getEmailTxtField().isEmpty()||regis.getPassTxtField().isEmpty()||regis.getNohpTxtField().isEmpty()){
             JOptionPane.showMessageDialog(null, "Ada field yang belum terisi", "Warning",JOptionPane.WARNING_MESSAGE);
         }else {
-            KoneksiDatabaseUser.InsertDataPasien(regis.getIdPasien1(), regis.getNamaTxtField(),regis.getEmailTxtField(),regis.getPassTxtField(),regis.getJeniskelaminTxtField(),
-                        regis.getNohpTxtField());
-            
-                JOptionPane.showMessageDialog(null, "sukses memasukan " + nama,
-                "Sukses",JOptionPane.INFORMATION_MESSAGE);
+           insertDataUser(nama);
         }
+    }
+    
+    public void insertDataUser(String nama){
+        KoneksiDatabaseUser.InsertDataPasien(regis.getIdPasien1(), regis.getNamaTxtField(), regis.getEmailTxtField(),
+                regis.getPassTxtField(), regis.getJeniskelaminTxtField(), regis.getNohpTxtField());
+        Login_GUI login = new Login_GUI();
+        login.show();
+        regis.dispose();
+        JOptionPane.showMessageDialog(null, "sukses memasukan " + nama, "Sukses",JOptionPane.INFORMATION_MESSAGE);
     }
 }
