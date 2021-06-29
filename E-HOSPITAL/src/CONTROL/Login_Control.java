@@ -18,11 +18,11 @@ public class Login_Control {
     }
     
     public void findDataUser (String email, String password, Login_GUI login){
-        if (login.getTxtEmail().intern() == " " && login.getTxtPassword().intern() == " ") {
+        if (isLoginEmpty()) {
            JOptionPane.showMessageDialog(null, "Email dan Password tidak terisi", "Warning",JOptionPane.WARNING_MESSAGE);
-        } else if (login.getTxtEmail().intern() == " ") {
+        } else if (isEmailEmpty()) {
            JOptionPane.showMessageDialog(null, "Email tidak terisi", "Warning",JOptionPane.WARNING_MESSAGE);
-        } else if (login.getTxtPassword().intern() == " ") {
+        } else if (isPasswordEmpty()) {
            JOptionPane.showMessageDialog(null, "Password tidak terisi", "Warning",JOptionPane.WARNING_MESSAGE);
         } else {
             boolean ketemu = isFindDataTrue(email, password);
@@ -53,6 +53,30 @@ public class Login_Control {
         } else {
             JOptionPane.showMessageDialog(null, "Data tidak ditemukan",
             "Warning",JOptionPane.WARNING_MESSAGE);
+        }
+    }
+    
+    public boolean isLoginEmpty() {
+        if (login.getTxtEmail().intern() == " " && login.getTxtPassword().intern() == " "){
+            return true;
+        }else {
+            return false;
+        }
+    }
+    
+    public boolean isEmailEmpty() {
+        if (login.getTxtEmail().intern() == " "){
+            return true;
+        }else {
+            return false;
+        }
+    }
+    
+    public boolean isPasswordEmpty() {
+        if (login.getTxtEmail().intern() == " "){
+            return true;
+        }else {
+            return false;
         }
     }
 }
