@@ -11,14 +11,6 @@ public class Login_GUI extends javax.swing.JFrame {
         initComponents();
         login = new Login_Control(this);
     }
-
-    public String getTxtEmail() {
-        return txtEmail.getText();
-    }
-
-    public String getTxtPassword() {
-        return txtPassword.getText();
-    }
    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -154,10 +146,22 @@ public class Login_GUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
+        newFormRegister();
+    }//GEN-LAST:event_jButton1ActionPerformed
+    
+    public void newFormRegister(){
         Register_GUI r = new Register_GUI();
         r.show();
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }
+    
+    public String getTxtEmail() {
+        return txtEmail.getText();
+    }
+
+    public String getTxtPassword() {
+        return txtPassword.getText();
+    }
     
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
