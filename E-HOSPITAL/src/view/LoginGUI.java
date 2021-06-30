@@ -150,7 +150,7 @@ public class LoginGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
     
     public void newFormRegister(){
-        Register_GUI r = new Register_GUI();
+        RegisterGUI r = new RegisterGUI();
         r.show();
         dispose();
     }

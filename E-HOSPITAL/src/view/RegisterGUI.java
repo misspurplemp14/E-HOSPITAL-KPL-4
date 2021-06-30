@@ -1,16 +1,15 @@
 package view;
-
-import control.Registrasi_Control;
+import control.RegisterControl;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-public class Register_GUI extends javax.swing.JFrame {
+public class RegisterGUI extends javax.swing.JFrame {
 
-    public static Registrasi_Control control;
-    public Register_GUI() {
+    public static RegisterControl kontrol;
+    public RegisterGUI() {
         initComponents();
-        control = new Registrasi_Control(this);
+        kontrol = new RegisterControl(this);
     }
   
     @SuppressWarnings("unchecked")
@@ -220,7 +219,7 @@ public class Register_GUI extends javax.swing.JFrame {
 
     private void daftarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarButtonActionPerformed
         try {
-            control.isiData(getIdPasien1(), getNamaTxtField(), getEmailTxtField(),
+            kontrol.fillData(getIdPasien1(), getNamaTxtField(), getEmailTxtField(),
                     getPassTxtField(), getJeniskelaminTxtField(), getNohpTxtField(),this);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Tipe data yang dimasukan Salah !",
@@ -233,8 +232,8 @@ public class Register_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public void newFormMenu(){
-        MenuUtama_GUI u = new MenuUtama_GUI();
-        u.show();
+        MenuUtama_GUI menu = new MenuUtama_GUI();
+        menu.show();
         dispose();
     }
     
@@ -248,7 +247,6 @@ public class Register_GUI extends javax.swing.JFrame {
     }
 
     public String getJeniskelaminTxtField() {
-
         if(jeniskelaminTxtField.getSelectedItem().toString().intern()== "Laki laki"){
             return "Laki laki";
         }else{
@@ -269,10 +267,9 @@ public class Register_GUI extends javax.swing.JFrame {
     }
     
     public static void main(String args[]) {
-
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Register_GUI().setVisible(true);
+                new RegisterGUI().setVisible(true);
             }
         });
     }
