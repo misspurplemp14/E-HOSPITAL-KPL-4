@@ -1,6 +1,7 @@
-package Database;
+package database;
 
-import MODEL.User_Model;
+import database.KoneksiDatabaseUser;
+import model.User_Model;
 import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;

@@ -1,6 +1,7 @@
-package CONTROL;
+package control;
 
-import VIEW.Login_GUI;
+import control.Login_Control;
+import views.Login_GUI;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
