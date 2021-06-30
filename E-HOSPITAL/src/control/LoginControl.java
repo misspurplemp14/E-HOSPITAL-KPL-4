@@ -3,13 +3,13 @@ package control;
 import database.ConnectionDatabaseUser;
 import model.UserModel;
 import view.LoginGUI;
-import view.MenuUtama_GUI;
+import view.MainMenuGUI;
 import java.util.List;
 import javax.swing.JOptionPane;
 
 public class LoginControl {
     LoginGUI login;
-    MenuUtama_GUI menu;
+    MainMenuGUI menu;
     public List <UserModel> pengguna;
     
     public LoginControl(LoginGUI loginForm){
@@ -48,7 +48,7 @@ public class LoginControl {
             JOptionPane.showMessageDialog(null, "Sukses Login",
                 "Sukses",JOptionPane.INFORMATION_MESSAGE);
             login.dispose();
-            MenuUtama_GUI menuHome = new MenuUtama_GUI();
+            MainMenuGUI menuHome = new MainMenuGUI();
             menuHome.show();
         } else {
             JOptionPane.showMessageDialog(null, "Data tidak ditemukan",
