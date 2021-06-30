@@ -1,7 +1,7 @@
 package database;
 
 import database.ConnectionDatabaseUser;
-import model.User_Model;
+import model.UserModel;
 import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -13,7 +13,7 @@ public class KoneksiDatabaseUserTest {
 
     @Test
     public void testGetData() {
-        List<User_Model> test = ConnectionDatabaseUser.GetData();
+        List<UserModel> test = ConnectionDatabaseUser.GetData();
         
         String expect = "PAS01";
         String real = "" ;

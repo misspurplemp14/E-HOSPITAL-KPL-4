@@ -1,7 +1,7 @@
 package control;
 
 import database.ConnectionDatabaseUser;
-import model.User_Model;
+import model.UserModel;
 import view.LoginGUI;
 import view.MenuUtama_GUI;
 import java.util.List;
@@ -9,11 +9,11 @@ import javax.swing.JOptionPane;
 
 public class LoginControl {
     LoginGUI login;
-    MenuUtama_GUI home;
-    public List <User_Model> user;
+    MenuUtama_GUI menu;
+    public List <UserModel> pengguna;
     
     public LoginControl(LoginGUI loginForm){
-        user = ConnectionDatabaseUser.GetData();
+        pengguna = ConnectionDatabaseUser.GetData();
         this.login = loginForm;
     }
     
@@ -34,8 +34,8 @@ public class LoginControl {
     public boolean isFindDataTrue(String email, String password) {
         boolean ketemu = false;
         int index = 0;
-        while (ketemu == false & index < user.size()){
-            if (email.intern() == user.get(index).getEmail().intern() && password.intern() == user.get(index).getPassword().intern()){
+        while (ketemu == false & index < pengguna.size()){
+            if (email.intern() == pengguna.get(index).getEmail().intern() && password.intern() == pengguna.get(index).getPassword().intern()){
                 ketemu = true;
             }
             index = index + 1;

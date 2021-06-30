@@ -1,7 +1,7 @@
 package control;
 
 import database.ConnectionDatabaseUser;
-import model.User_Model;
+import model.UserModel;
 import view.LoginGUI;
 import view.RegisterGUI;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 public class RegisterControl {
-    List<User_Model> user;
+    List<UserModel> user;
     RegisterGUI regis;
     
     
@@ -18,7 +18,7 @@ public class RegisterControl {
         this.regis = regis;
     }
     
-    public void isiData(String idPasien, String nama, String email, String password, String jenisKelamin, String noHp, RegisterGUI regis){
+    public void fillData(String idPasien, String nama, String email, String password, String jenisKelamin, String noHp, RegisterGUI regis){
         if (regis.getNamaTxtField().isEmpty()&& regis.getEmailTxtField().isEmpty()&&regis.getPassTxtField().isEmpty()&&regis.getNohpTxtField().isEmpty()){
             JOptionPane.showMessageDialog(null, "Ada field yang belum terisi", "Warning",JOptionPane.WARNING_MESSAGE);
             

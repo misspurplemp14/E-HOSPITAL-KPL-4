@@ -1,18 +1,18 @@
 package model;
 
-public class User_Model {
+public class UserModel {
     private String nama;
     private String email;
-    private String password;
+    private String kataSandi;
     private String jenisKelamin;
     private String noHp;
     private String idPasien;
     
-    public User_Model(String idPasien, String nama, String email, String password, String jenisKelamin, String noHp) {
+    public UserModel(String idPasien, String nama, String email, String kataSandi, String jenisKelamin, String noHp) {
         this.idPasien = idPasien;
         this.nama = nama;
         this.email = email;
-        this.password = password;
+        this.kataSandi = kataSandi;
         this.jenisKelamin = jenisKelamin;
         this.noHp = noHp;
     }
@@ -42,11 +42,11 @@ public class User_Model {
     }
 
     public String getPassword() {
-        return password;
+        return kataSandi;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassword(String kataSandi) {
+        this.kataSandi = kataSandi;
     }
 
     public String getJenisKelamin() {

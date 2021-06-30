@@ -1,6 +1,6 @@
 package database;
 
-import model.User_Model;
+import model.UserModel;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,9 +28,9 @@ public class ConnectionDatabaseUser {
         }
     }
 
-    public static List<User_Model> GetData(){
+    public static List<UserModel> GetData(){
         try{
-            ArrayList<User_Model> userList = new ArrayList<User_Model>();
+            ArrayList<UserModel> userList = new ArrayList<UserModel>();
             connect = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
             stetment = connect.createStatement();
 
@@ -39,7 +39,7 @@ public class ConnectionDatabaseUser {
 
 
             while(result.next()){
-                userList.add(new User_Model(result.getString("ID_PASIEN"), result.getString("NAMA_PASIEN"), result.getString("EMAIL_PASIEN")
+                userList.add(new UserModel(result.getString("ID_PASIEN"), result.getString("NAMA_PASIEN"), result.getString("EMAIL_PASIEN")
                                 ,result.getString("PASSWORD_PASIEN"),result.getString("JENIS_KELAMIN"),result.getString("NO_HP")));
             }
 
