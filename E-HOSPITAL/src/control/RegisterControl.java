@@ -9,20 +9,18 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 public class RegisterControl {
-    List<UserModel> user;
-    RegisterGUI regis;
+    List<UserModel> pengguna;
+    RegisterGUI registrasi;
     
-    
-    public RegisterControl (RegisterGUI regis){
-        user = ConnectionDatabaseUser.GetData();
-        this.regis = regis;
+    public RegisterControl (RegisterGUI registrasi){
+        pengguna = ConnectionDatabaseUser.GetData();
+        this.registrasi = registrasi;
     }
     
-    public void fillData(String idPasien, String nama, String email, String password, String jenisKelamin, String noHp, RegisterGUI regis){
-        if (regis.getNamaTxtField().isEmpty()&& regis.getEmailTxtField().isEmpty()&&regis.getPassTxtField().isEmpty()&&regis.getNohpTxtField().isEmpty()){
+    public void fillData(String idPasien, String nama, String email, String kataSandi, String jenisKelamin, String noHp, RegisterGUI registrasi){
+        if (registrasi.getNamaTxtField().isEmpty()&& registrasi.getEmailTxtField().isEmpty()&&registrasi.getPassTxtField().isEmpty()&&registrasi.getNohpTxtField().isEmpty()){
             JOptionPane.showMessageDialog(null, "Ada field yang belum terisi", "Warning",JOptionPane.WARNING_MESSAGE);
-            
-        }else if(regis.getNamaTxtField().isEmpty()|| regis.getEmailTxtField().isEmpty()||regis.getPassTxtField().isEmpty()||regis.getNohpTxtField().isEmpty()){
+        }else if(registrasi.getNamaTxtField().isEmpty()|| registrasi.getEmailTxtField().isEmpty()||registrasi.getPassTxtField().isEmpty()||registrasi.getNohpTxtField().isEmpty()){
             JOptionPane.showMessageDialog(null, "Ada field yang belum terisi", "Warning",JOptionPane.WARNING_MESSAGE);
         }else {
            insertDataUser(nama);
@@ -30,11 +28,11 @@ public class RegisterControl {
     }
     
     public void insertDataUser(String nama){
-        ConnectionDatabaseUser.InsertDataPasien(regis.getIdPasien1(), regis.getNamaTxtField(), regis.getEmailTxtField(),
-                regis.getPassTxtField(), regis.getJeniskelaminTxtField(), regis.getNohpTxtField());
+        ConnectionDatabaseUser.InsertDataPasien(registrasi.getIdPasien1(), registrasi.getNamaTxtField(), registrasi.getEmailTxtField(),
+                registrasi.getPassTxtField(), registrasi.getJeniskelaminTxtField(), registrasi.getNohpTxtField());
         LoginGUI login = new LoginGUI();
         login.show();
-        regis.dispose();
+        registrasi.dispose();
         JOptionPane.showMessageDialog(null, "sukses memasukan " + nama, "Sukses",JOptionPane.INFORMATION_MESSAGE);
     }
 }

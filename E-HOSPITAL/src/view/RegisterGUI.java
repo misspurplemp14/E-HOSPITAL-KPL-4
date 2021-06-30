@@ -232,7 +232,7 @@ public class RegisterGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public void newFormMenu(){
-        MenuUtama_GUI menu = new MenuUtama_GUI();
+        MainMenuGUI menu = new MainMenuGUI();
         menu.show();
         dispose();
     }
