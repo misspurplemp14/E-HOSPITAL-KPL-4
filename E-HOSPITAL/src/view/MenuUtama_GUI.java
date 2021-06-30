@@ -1,4 +1,4 @@
-package views;
+package view;
 
 import javax.swing.JOptionPane;
 
@@ -149,7 +149,7 @@ public class MenuUtama_GUI extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
-        Login_GUI l = new Login_GUI();
+        LoginGUI l = new LoginGUI();
         l.show();
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed

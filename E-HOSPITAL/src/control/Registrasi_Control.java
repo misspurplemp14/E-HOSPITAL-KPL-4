@@ -1,9 +1,9 @@
 package control;
 
-import database.KoneksiDatabaseUser;
+import database.ConnectionDatabaseUser;
 import model.User_Model;
-import views.Login_GUI;
-import views.Register_GUI;
+import view.LoginGUI;
+import view.Register_GUI;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -14,7 +14,7 @@ public class Registrasi_Control {
     
     
     public Registrasi_Control (Register_GUI regis){
-        user = KoneksiDatabaseUser.GetData();
+        user = ConnectionDatabaseUser.GetData();
         this.regis = regis;
     }
     
@@ -30,9 +30,9 @@ public class Registrasi_Control {
     }
     
     public void insertDataUser(String nama){
-        KoneksiDatabaseUser.InsertDataPasien(regis.getIdPasien1(), regis.getNamaTxtField(), regis.getEmailTxtField(),
+        ConnectionDatabaseUser.InsertDataPasien(regis.getIdPasien1(), regis.getNamaTxtField(), regis.getEmailTxtField(),
                 regis.getPassTxtField(), regis.getJeniskelaminTxtField(), regis.getNohpTxtField());
-        Login_GUI login = new Login_GUI();
+        LoginGUI login = new LoginGUI();
         login.show();
         regis.dispose();
         JOptionPane.showMessageDialog(null, "sukses memasukan " + nama, "Sukses",JOptionPane.INFORMATION_MESSAGE);

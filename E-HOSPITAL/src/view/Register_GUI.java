@@ -1,4 +1,4 @@
-package views;
+package view;
 
 import control.Registrasi_Control;
 import javax.swing.JComboBox;

@@ -6,23 +6,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class KoneksiDatabaseUser {
+public class ConnectionDatabaseUser {
     static final String DB_URL = "jdbc:mysql://localhost/E-HOSPITAL";
     static final String DB_USER = "root";
     static final String DB_PASS = "";
-    static Connection conn;
-    static Statement stmt;
-    static ResultSet rs;
+    static Connection connect;
+    static Statement stetment;
+    static ResultSet result;
 
     public static void InsertDataPasien(String idPasien, String nama, String email, String password, String jenisKelamin, String noHp){
         try{
-            conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
-            stmt = conn.createStatement();
+            connect = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
+            stetment = connect.createStatement();
 
             String sql = "INSERT INTO pasien(ID_PASIEN, NAMA_PASIEN, EMAIL_PASIEN, PASSWORD_PASIEN, JENIS_KELAMIN, NO_HP) VALUES ('"+idPasien+"','"+nama+"','"+email+"','"+password+"','"+jenisKelamin+"','"+noHp+"')";
-            stmt.execute(sql);
-            stmt.close();
-            conn.close();
+            stetment.execute(sql);
+            stetment.close();
+            connect.close();
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -31,20 +31,20 @@ public class KoneksiDatabaseUser {
     public static List<User_Model> GetData(){
         try{
             ArrayList<User_Model> userList = new ArrayList<User_Model>();
-            conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
-            stmt = conn.createStatement();
+            connect = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
+            stetment = connect.createStatement();
 
             String sql = "SELECT * FROM pasien";
-            rs = stmt.executeQuery(sql);
+            result = stetment.executeQuery(sql);
 
 
-            while(rs.next()){
-                userList.add(new User_Model(rs.getString("ID_PASIEN"), rs.getString("NAMA_PASIEN"), rs.getString("EMAIL_PASIEN")
-                                ,rs.getString("PASSWORD_PASIEN"),rs.getString("JENIS_KELAMIN"),rs.getString("NO_HP")));
+            while(result.next()){
+                userList.add(new User_Model(result.getString("ID_PASIEN"), result.getString("NAMA_PASIEN"), result.getString("EMAIL_PASIEN")
+                                ,result.getString("PASSWORD_PASIEN"),result.getString("JENIS_KELAMIN"),result.getString("NO_HP")));
             }
 
-            stmt.close();
-            conn.close();
+            stetment.close();
+            connect.close();
 
             return userList;
 

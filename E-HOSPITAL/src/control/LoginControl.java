@@ -1,23 +1,23 @@
 package control;
 
-import database.KoneksiDatabaseUser;
+import database.ConnectionDatabaseUser;
 import model.User_Model;
-import views.Login_GUI;
-import views.MenuUtama_GUI;
+import view.LoginGUI;
+import view.MenuUtama_GUI;
 import java.util.List;
 import javax.swing.JOptionPane;
 
-public class Login_Control {
-    Login_GUI login;
+public class LoginControl {
+    LoginGUI login;
     MenuUtama_GUI home;
     public List <User_Model> user;
     
-    public Login_Control(Login_GUI loginForm){
-        user = KoneksiDatabaseUser.GetData();
+    public LoginControl(LoginGUI loginForm){
+        user = ConnectionDatabaseUser.GetData();
         this.login = loginForm;
     }
     
-    public void findDataUser (String email, String password, Login_GUI login){
+    public void findDataUser (String email, String password, LoginGUI login){
         if (isLoginEmpty()) {
            JOptionPane.showMessageDialog(null, "Email dan Password tidak terisi", "Warning",JOptionPane.WARNING_MESSAGE);
         } else if (isEmailEmpty()) {
@@ -63,7 +63,7 @@ public class Login_Control {
             return false;
         }
     }
-    public boolean isLoginEmpty(Login_GUI loginForm) {
+    public boolean isLoginEmpty(LoginGUI loginForm) {
         if (loginForm.getTxtEmail().intern() == " " && loginForm.getTxtPassword().intern() == " "){
             return true;
         }else {

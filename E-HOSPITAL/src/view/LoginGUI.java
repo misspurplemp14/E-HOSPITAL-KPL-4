@@ -1,15 +1,15 @@
-package views;
+package view;
 
-import control.Login_Control;
+import control.LoginControl;
 import javax.swing.JTextField;
 
-public class Login_GUI extends javax.swing.JFrame {
+public class LoginGUI extends javax.swing.JFrame {
 
-    public static Login_Control login;
+    public static LoginControl login;
 
-    public Login_GUI() {
+    public LoginGUI() {
         initComponents();
-        login = new Login_Control(this);
+        login = new LoginControl(this);
     }
    
     @SuppressWarnings("unchecked")
@@ -166,7 +166,7 @@ public class Login_GUI extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login_GUI().setVisible(true);
+                new LoginGUI().setVisible(true);
             }
         });
     }

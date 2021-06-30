@@ -1,7 +1,7 @@
 package control;
 
-import control.Login_Control;
-import views.Login_GUI;
+import control.LoginControl;
+import view.LoginGUI;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -12,7 +12,7 @@ public class Login_ControlTest {
 
     @Test
     public void testIsFindDataTrue() {
-        Login_Control test = new Login_Control(null);
+        LoginControl test = new LoginControl(null);
         
         boolean expect = true;
         boolean real = test.isFindDataTrue("rana@gmail.com","ranaa");
@@ -21,8 +21,8 @@ public class Login_ControlTest {
     }
     @Test
     public void testIsLoginEmpty(){
-       Login_Control test = new Login_Control(null);
-       Login_GUI loginForm = new Login_GUI();
+       LoginControl test = new LoginControl(null);
+       LoginGUI loginForm = new LoginGUI();
        
        boolean expect = false;
        boolean real = test.isLoginEmpty(loginForm);
