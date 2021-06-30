@@ -1,5 +1,5 @@
-
 package CONTROL;
+
 import Database.KoneksiDatabaseUser;
 import MODEL.User_Model;
 import VIEW.Login_GUI;
@@ -63,7 +63,14 @@ public class Login_Control {
             return false;
         }
     }
-    
+    public boolean isLoginEmpty(Login_GUI loginForm) {
+        if (loginForm.getTxtEmail().intern() == " " && loginForm.getTxtPassword().intern() == " "){
+            return true;
+        }else {
+            return false;
+        }
+    }
+     
     public boolean isEmailEmpty() {
         if (login.getTxtEmail().intern() == " "){
             return true;
