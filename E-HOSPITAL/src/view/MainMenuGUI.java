@@ -2,9 +2,9 @@ package view;
 
 import javax.swing.JOptionPane;
 
-public class MenuUtama_GUI extends javax.swing.JFrame {
+public class MainMenuGUI extends javax.swing.JFrame {
 
-    public MenuUtama_GUI() {
+    public MainMenuGUI() {
         initComponents();
     }
 
@@ -149,15 +149,15 @@ public class MenuUtama_GUI extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
-        LoginGUI l = new LoginGUI();
-        l.show();
+        LoginGUI masuk = new LoginGUI();
+        masuk.show();
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuUtama_GUI().setVisible(true);
+                new MainMenuGUI().setVisible(true);
             }
         });
     }

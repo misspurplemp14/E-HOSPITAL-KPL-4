@@ -12,21 +12,22 @@ public class Login_ControlTest {
 
     @Test
     public void testIsFindDataTrue() {
-        LoginControl test = new LoginControl(null);
+        LoginControl uji = new LoginControl(null);
         
-        boolean expect = true;
-        boolean real = test.isFindDataTrue("rana@gmail.com","ranaa");
+        boolean perkiraan = true;
+        boolean realita = uji.isFindDataTrue("rana@gmail.com","ranaa");
         
-        assertEquals(expect, real);
+        assertEquals(perkiraan, realita);
     }
+    
     @Test
     public void testIsLoginEmpty(){
-       LoginControl test = new LoginControl(null);
+       LoginControl uji = new LoginControl(null);
        LoginGUI loginForm = new LoginGUI();
        
-       boolean expect = false;
-       boolean real = test.isLoginEmpty(loginForm);
+       boolean perkiraan = false;
+       boolean realita = uji.isLoginEmpty(loginForm);
        
-       assertEquals(expect, real);
+       assertEquals(perkiraan, realita);
    }
 }

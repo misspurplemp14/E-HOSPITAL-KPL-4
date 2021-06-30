@@ -13,16 +13,16 @@ public class KoneksiDatabaseUserTest {
 
     @Test
     public void testGetData() {
-        List<UserModel> test = ConnectionDatabaseUser.GetData();
+        List<UserModel> uji = ConnectionDatabaseUser.GetData();
         
-        String expect = "PAS01";
-        String real = "" ;
+        String perkiraan = "PAS01";
+        String realita = "" ;
         
-        for (int i = 0 ; i < test.size();i++) {
-            if (expect.intern() == test.get(i).getIdPasien().intern()) {
-                real = test.get(i).getIdPasien();
+        for (int i = 0 ; i < uji.size();i++) {
+            if (perkiraan.intern() == uji.get(i).getIdPasien().intern()) {
+                realita = uji.get(i).getIdPasien();
             }
         }
-        assertEquals(expect, real);    
+        assertEquals(perkiraan, realita);    
     }
 }
