@@ -143,8 +143,8 @@ public class LoginGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
-        
-        login.findDataUser(getTxtEmail(), getTxtPassword(), this);
+        MainMenuGUI menuHome = new MainMenuGUI();
+        login.findDataUser(getTxtEmail(), getTxtPassword(), this, menuHome);
     }//GEN-LAST:event_buttonLoginActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

@@ -17,16 +17,16 @@ public class LoginControl {
         this.login = loginForm;
     }
     
-    public void findDataUser (String email, String password, LoginGUI login){
+    public void findDataUser (String email, String password, LoginGUI login, MainMenuGUI menuHome){
         if (isLoginEmpty()) {
            JOptionPane.showMessageDialog(null, "Email dan Password tidak terisi", "Warning",JOptionPane.WARNING_MESSAGE);
-        } else if (isEmailEmpty()) {
+        } else if (isEmailEmpty(login)) {
            JOptionPane.showMessageDialog(null, "Email tidak terisi", "Warning",JOptionPane.WARNING_MESSAGE);
-        } else if (isPasswordEmpty()) {
+        } else if (isPasswordEmpty(login)) {
            JOptionPane.showMessageDialog(null, "Password tidak terisi", "Warning",JOptionPane.WARNING_MESSAGE);
         } else {
             boolean find = isFindDataTrue(email, password);
-            whenFindData(find);
+            whenFindData(find, menuHome, login);
         }
     }
     
@@ -43,12 +43,12 @@ public class LoginControl {
         return true;
     }
     
-    public void whenFindData(boolean find) {
+    public void whenFindData(boolean find, MainMenuGUI menuHome, LoginGUI loginForm) {
         if (find == true ) {
             JOptionPane.showMessageDialog(null, "Sukses Login",
                 "Sukses",JOptionPane.INFORMATION_MESSAGE);
-            login.dispose();
-            MainMenuGUI menuHome = new MainMenuGUI();
+            loginForm.dispose();
+            menuHome = new MainMenuGUI();
             menuHome.show();
         } else {
             JOptionPane.showMessageDialog(null, "Data tidak ditemukan",
@@ -71,16 +71,16 @@ public class LoginControl {
         }
     }
      
-    public boolean isEmailEmpty() {
-        if (login.getTxtEmail().intern() == " "){
+    public boolean isEmailEmpty(LoginGUI loginForm) {
+        if (loginForm.getTxtEmail().intern() == " "){
             return true;
         }else {
             return false;
         }
     }
     
-    public boolean isPasswordEmpty() {
-        if (login.getTxtEmail().intern() == " "){
+    public boolean isPasswordEmpty(LoginGUI loginForm) {
+        if (loginForm.getTxtEmail().intern() == " "){
             return true;
         }else {
             return false;
