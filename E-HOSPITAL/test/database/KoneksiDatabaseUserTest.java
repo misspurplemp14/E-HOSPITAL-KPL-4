@@ -15,15 +15,15 @@ public class KoneksiDatabaseUserTest {
     public void testGetData() {
         List<UserModel> uji = ConnectionDatabaseUser.GetData();
         
-        String perkiraan = "PAS01";
-        String realita = "" ;
+        String expect = "PAS01";
+        String reality = "" ;
         
         for (int i = 0 ; i < uji.size();i++) {
-            if (perkiraan.intern() == uji.get(i).getIdPasien().intern()) {
-                realita = uji.get(i).getIdPasien();
+            if (expect.intern() == uji.get(i).getIdPasien().intern()) {
+                reality = uji.get(i).getIdPasien();
             }
         }
-        assertEquals(perkiraan, realita);    
+        assertEquals(expect, reality);    
     }
     
     @Test
@@ -31,14 +31,14 @@ public class KoneksiDatabaseUserTest {
         ConnectionDatabaseUser.InsertDataPasien("PAS11", "Sandi", "sandi@gmail.com", "sandii", "Perempuan", "081234");
         List<UserModel> uji = ConnectionDatabaseUser.GetData();
         
-        String perkiraan = "PAS11";
-        String realita = "" ;
+        String expect = "PAS11";
+        String reality = "" ;
         
         for (int i = 0 ; i < uji.size();i++) {
-            if (perkiraan.intern() == uji.get(i).getIdPasien().intern()) {
-                realita = uji.get(i).getIdPasien();
+            if (expect.intern() == uji.get(i).getIdPasien().intern()) {
+                reality = uji.get(i).getIdPasien();
             }
         }
-        assertEquals(perkiraan, realita);    
+        assertEquals(expect, reality);    
     }
 }
