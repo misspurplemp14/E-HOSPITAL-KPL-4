@@ -1,14 +1,14 @@
+
 package control;
 
-import control.LoginControl;
-import view.LoginGUI;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import view.LoginGUI;
 import view.MainMenuGUI;
 
-public class Login_ControlTest {
+public class ControlLoginTest {
     
-    public Login_ControlTest() {
+    public ControlLoginTest() {
     }
 
     @Test
