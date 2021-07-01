@@ -5,9 +5,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class RegisterGUITest {
-    
-    public RegisterGUITest() {
-    }
 
     @Test
     public void testNewFormMenu() {
@@ -17,6 +14,12 @@ public class RegisterGUITest {
 
     @Test
     public void testGetIdUser() {
+        RegisterGUI test = new RegisterGUI();
+        
+        boolean expect = true;
+        boolean reality = test.getIdUser().isEmpty();
+        
+        assertEquals(expect, reality);
     }
 
     @Test
@@ -68,9 +71,4 @@ public class RegisterGUITest {
         
         assertEquals(expect, reality);
     }
-
-    @Test
-    public void testMain() {
-    }
-    
 }
