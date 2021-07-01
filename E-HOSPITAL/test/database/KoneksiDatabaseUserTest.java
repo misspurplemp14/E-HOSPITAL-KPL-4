@@ -25,4 +25,20 @@ public class KoneksiDatabaseUserTest {
         }
         assertEquals(perkiraan, realita);    
     }
+    
+    @Test
+    public void testInsertDataPasien() {
+        ConnectionDatabaseUser.InsertDataPasien("PAS11", "Sandi", "sandi@gmail.com", "sandii", "Perempuan", "081234");
+        List<UserModel> uji = ConnectionDatabaseUser.GetData();
+        
+        String perkiraan = "PAS11";
+        String realita = "" ;
+        
+        for (int i = 0 ; i < uji.size();i++) {
+            if (perkiraan.intern() == uji.get(i).getIdPasien().intern()) {
+                realita = uji.get(i).getIdPasien();
+            }
+        }
+        assertEquals(perkiraan, realita);    
+    }
 }
