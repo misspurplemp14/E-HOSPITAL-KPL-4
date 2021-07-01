@@ -3,9 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/E-HOSPITAL-KPL-4/E-HOSPITAL/src/control/LoginControl.java</file>
-            <file>file:/D:/E-HOSPITAL-KPL-4/E-HOSPITAL/test/control/Login_ControlTest.java</file>
-            <file>file:/D:/E-HOSPITAL-KPL-4/E-HOSPITAL/src/control/RegisterControl.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/test/control/Login_ControlTest.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/picture/stethoscope__1_-removebg-preview.png</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/test/database/KoneksiDatabaseUserTest.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/control/LoginControl.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/database/ConnectionDatabaseUser.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/view/LoginGUI.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/test/control/RegisterControlTest.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/control/RegisterControl.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/model/UserModel.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/picture/dokter-removebg-preview.png</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/view/MainMenuGUI.java</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/picture/capsules-removebg-preview%20(1).png</file>
+            <file>file:/C:/Users/acer/Documents/E-HOSPITAL-KPL-4/E-HOSPITAL/src/view/RegisterGUI.java</file>
         </group>
     </open-files>
 </project-private>

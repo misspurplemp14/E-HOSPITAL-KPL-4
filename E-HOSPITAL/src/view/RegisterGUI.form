@@ -88,12 +88,12 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="nohpTxtField" pref="302" max="32767" attributes="0"/>
-                              <Component id="passTxtField" max="32767" attributes="0"/>
+                              <Component id="txtNoHp" pref="302" max="32767" attributes="0"/>
+                              <Component id="txtPass" max="32767" attributes="0"/>
                               <Component id="jeniskelaminTxtField" min="-2" max="-2" attributes="0"/>
-                              <Component id="namaTxtField" alignment="1" max="32767" attributes="0"/>
-                              <Component id="emailTxtField" alignment="0" max="32767" attributes="0"/>
-                              <Component id="idPasien1" alignment="1" max="32767" attributes="0"/>
+                              <Component id="txtName" alignment="1" max="32767" attributes="0"/>
+                              <Component id="txtEmail" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtIdUser" alignment="1" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace pref="53" max="32767" attributes="0"/>
                       </Group>
@@ -134,22 +134,22 @@
                           <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="idPasien" min="-2" max="-2" attributes="0"/>
-                              <Component id="idPasien1" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtIdUser" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="namaTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="emailTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="passTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtPass" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -159,7 +159,7 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="nohpTxtField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtNoHp" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
@@ -218,7 +218,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="daftarButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="namaTxtField">
+        <Component class="javax.swing.JTextField" name="txtName">
           <Properties>
             <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
@@ -226,7 +226,7 @@
             <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="namaLengkapTxtField"/>
           </AccessibilityProperties>
         </Component>
-        <Component class="javax.swing.JTextField" name="emailTxtField">
+        <Component class="javax.swing.JTextField" name="txtEmail">
           <Properties>
             <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
@@ -234,7 +234,7 @@
             <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="emailDaftarTxtField"/>
           </AccessibilityProperties>
         </Component>
-        <Component class="javax.swing.JTextField" name="passTxtField">
+        <Component class="javax.swing.JTextField" name="txtPass">
           <Properties>
             <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
@@ -247,7 +247,7 @@
             <Property name="text" type="java.lang.String" value="Jenis Kelamin"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="nohpTxtField">
+        <Component class="javax.swing.JTextField" name="txtNoHp">
           <Properties>
             <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
@@ -278,7 +278,7 @@
             <Property name="text" type="java.lang.String" value="NO. KTP"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="idPasien1">
+        <Component class="javax.swing.JTextField" name="txtIdUser">
         </Component>
         <Container class="javax.swing.JPanel" name="jPanel2">
           <Properties>
