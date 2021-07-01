@@ -10,10 +10,10 @@ import javax.swing.JOptionPane;
 public class LoginControl {
     LoginGUI login;
     MainMenuGUI menu;
-    public List <UserModel> pengguna;
+    public List <UserModel> user;
     
     public LoginControl(LoginGUI loginForm){
-        pengguna = ConnectionDatabaseUser.GetData();
+        user = ConnectionDatabaseUser.GetData();
         this.login = loginForm;
     }
     
@@ -25,26 +25,26 @@ public class LoginControl {
         } else if (isPasswordEmpty()) {
            JOptionPane.showMessageDialog(null, "Password tidak terisi", "Warning",JOptionPane.WARNING_MESSAGE);
         } else {
-            boolean ketemu = isFindDataTrue(email, password);
-            whenFindData(ketemu);
+            boolean find = isFindDataTrue(email, password);
+            whenFindData(find);
         }
     }
     
     // Function dan procedure cari data.
     public boolean isFindDataTrue(String email, String password) {
-        boolean ketemu = false;
+        boolean find = false;
         int index = 0;
-        while (ketemu == false & index < pengguna.size()){
-            if (email.intern() == pengguna.get(index).getEmail().intern() && password.intern() == pengguna.get(index).getPassword().intern()){
-                ketemu = true;
+        while (find == false & index < user.size()){
+            if (email.intern() == user.get(index).getEmail().intern() && password.intern() == user.get(index).getPassword().intern()){
+                find = true;
             }
             index = index + 1;
         }
         return true;
     }
     
-    public void whenFindData(boolean ketemu) {
-        if (ketemu == true ) {
+    public void whenFindData(boolean find) {
+        if (find == true ) {
             JOptionPane.showMessageDialog(null, "Sukses Login",
                 "Sukses",JOptionPane.INFORMATION_MESSAGE);
             login.dispose();
